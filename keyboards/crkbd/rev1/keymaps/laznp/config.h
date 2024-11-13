@@ -19,6 +19,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #pragma once
+#undef MANUFACTURER
+#undef PRODUCT
+#define MANUFACTURER "CRKBD"
+#define PRODUCT "Corne Keyboard"
 #define MASTER_LEFT
 #define SPLIT_USB_DETECT
 #define TAPPING_TERM 120
