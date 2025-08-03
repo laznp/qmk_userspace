@@ -1,5 +1,5 @@
 VIA_ENABLE          = no
-VIAL_ENABLE         = yes
+VIAL_ENABLE         = no
 LTO_ENABLE          = yes
 COMBO_ENABLE        = yes
 
@@ -19,3 +19,4 @@ EXTRAKEY_ENABLE     = no
 
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = no
+CAPS_WORD_ENABLE = yes
