@@ -18,21 +18,28 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
+enum {
+    TD_QUOT_ESC = 0,
+};
 const uint16_t PROGMEM switch_layer0[] = {KC_M, KC_COMM, KC_DOT, COMBO_END};
 const uint16_t PROGMEM switch_layer3[] = {KC_J,    KC_K,   KC_L, COMBO_END};
+
+tap_dance_action_t tap_dance_actions[] = {
+    // Tap Once Quote, Tap Twice Escape
+    [TD_QUOT_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_QUOT, KC_ESC)
+};
 
 combo_t key_combos[] = {
     COMBO(switch_layer0, TO(0)),
     COMBO(switch_layer3, TO(3)),
 };
 
-
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
        KC_ESC,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_BSPC,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-       KC_TAB,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+       KC_TAB,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, TD(TD_QUOT_ESC),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_BSLS,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|

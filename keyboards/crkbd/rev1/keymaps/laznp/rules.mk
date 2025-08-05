@@ -3,6 +3,7 @@ VIAL_ENABLE         = no
 LTO_ENABLE          = yes
 COMBO_ENABLE        = yes
 MOUSEKEY_ENABLE     = yes
+TAP_DANCE_ENABLE    = yes
 
 VIAL_INSECURE       = no
 RGBLIGHT_ENABLE     = no
@@ -19,4 +20,4 @@ EXTRAKEY_ENABLE     = no
 
 CONSOLE_ENABLE = no
 COMMAND_ENABLE = no
-CAPS_WORD_ENABLE = yes
+CAPS_WORD_ENABLE = no
