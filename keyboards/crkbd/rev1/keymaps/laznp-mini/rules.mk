@@ -1,0 +1,24 @@
+VIA_ENABLE          = no
+VIAL_ENABLE         = no
+LTO_ENABLE          = yes
+COMBO_ENABLE        = yes
+MOUSEKEY_ENABLE     = yes
+TAP_DANCE_ENABLE    = yes
+OS_KEY_ENABLE       = yes
+
+VIAL_INSECURE       = no
+RGBLIGHT_ENABLE     = no
+RGB_MATRIX_ENABLE   = no
+OLED_ENABLE         = no
+OLED_DRIVER         = ssd1306
+QMK_SETTINGS        = no
+SPACE_CADET_ENABLE  = no
+GRAVE_ESC_ENABLE    = no
+MAGIC_ENABLE        = no
+MUSIC_ENABLE        = no
+KEY_OVERRIDE_ENABLE = no
+EXTRAKEY_ENABLE     = no
+
+CONSOLE_ENABLE = no
+COMMAND_ENABLE = no
+CAPS_WORD_ENABLE = no
