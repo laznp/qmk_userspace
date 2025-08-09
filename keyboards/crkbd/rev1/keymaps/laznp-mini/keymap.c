@@ -39,6 +39,7 @@ const uint16_t PROGMEM cmb_osm_rgui[] = {KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM cmb_osm_rctl[] = {KC_J, KC_L, COMBO_END};
 const uint16_t PROGMEM cmb_osm_rguisft[] = {KC_J, KC_K, KC_L, COMBO_END};
 const uint16_t PROGMEM cmb_osm_rctlsft[] = {KC_H, KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM cmb_caps[] = {KC_D, KC_F, KC_J, KC_K, COMBO_END};
 
 tap_dance_action_t tap_dance_actions[] = {
     // Tap Once Quote, Tap Twice Escape
@@ -58,6 +59,7 @@ combo_t key_combos[] = {
     COMBO(cmb_osm_rctl, OSM(MOD_RCTL)),
     COMBO(cmb_osm_rguisft, OSM(MOD_RGUI | MOD_RSFT)),
     COMBO(cmb_osm_rctlsft, OSM(MOD_RCTL | MOD_RSFT)),
+    COMBO(cmb_caps, KC_CAPS),
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -76,11 +78,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        KC_NO,  KC_ESC,    KC_7,    KC_8,    KC_9,    KC_0,                      _______, _______, _______, _______, KC_TAB , KC_NO,
+        KC_NO,  _______,    KC_7,    KC_8,    KC_9,    KC_0,                      _______, _______, _______, _______, KC_TAB , KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_NO, _______,    KC_4,    KC_5,    KC_6, KC_KB_VOLUME_UP,              KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_BSPC, KC_NO,
+        KC_NO,   KC_TAB,    KC_4,    KC_5,    KC_6, KC_KB_VOLUME_UP,              KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, KC_BSPC, KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_NO, _______,    KC_1,    KC_2,    KC_3, KC_KB_VOLUME_DOWN,            _______, _______, _______, _______, KC_DEL , KC_NO,
+        KC_NO,  _______,    KC_1,    KC_2,    KC_3, KC_KB_VOLUME_DOWN,            _______, _______, _______, _______, KC_DEL , KC_NO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_NO, _______, _______,     _______, _______,KC_NO
                                       //`--------------------------'  `--------------------------'
