@@ -2,11 +2,13 @@ VIA_ENABLE          = no
 VIAL_ENABLE         = no
 LTO_ENABLE          = yes
 COMBO_ENABLE        = yes
-MOUSEKEY_ENABLE     = yes
 TAP_DANCE_ENABLE    = yes
 OS_KEY_ENABLE       = yes
+SEND_STRING_ENABLE  = yes
+VPATH += keyboards/gboards
 
 VIAL_INSECURE       = no
+MOUSEKEY_ENABLE     = no
 RGBLIGHT_ENABLE     = no
 RGB_MATRIX_ENABLE   = no
 OLED_ENABLE         = no
