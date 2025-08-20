@@ -6,6 +6,7 @@ TAP_DANCE_ENABLE    = yes
 OS_KEY_ENABLE       = yes
 SEND_STRING_ENABLE  = yes
 VPATH += keyboards/gboards
+DEFERRED_EXEC_ENABLE = yes
 
 VIAL_INSECURE       = no
 MOUSEKEY_ENABLE     = no
