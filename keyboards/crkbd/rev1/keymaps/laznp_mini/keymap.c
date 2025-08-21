@@ -86,10 +86,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 smtd_resolution on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
     switch (keycode) {
-        SMTD_MT(KC_A, KC_LSFT)
-        SMTD_MT(KC_S, KC_LCTL)
-        SMTD_MT(KC_D, KC_LGUI)
-        SMTD_MT(KC_F, KC_LALT)
+        SMTD_MTE(KC_A, KC_LSFT)
+        SMTD_MTE(KC_S, KC_LCTL)
+        SMTD_MTE(KC_D, KC_LGUI)
+        SMTD_MTE(KC_F, KC_LALT)
     }
     return SMTD_RESOLUTION_UNHANDLED;
 }
+
+
