@@ -17,45 +17,26 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
-#include "g/keymap_combo.h"
-/* #include "sm_td.h" */
+/* #include "g/keymap_combo.h" */
 
-enum {
-    TD_SCLN_ESC = 0,
-};
+/* enum { */
+    /* TD_SCLN_ESC = 0, */
+/* }; */
 
-tap_dance_action_t tap_dance_actions[] = {
-    // Tap Once Quote, Tap Twice Escape
-    [TD_SCLN_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_ESC),
-};
-
-/* smtd_resolution on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) { */
-    /* switch (keycode) { */
-        /* SMTD_MT(KC_A, KC_LSFT) */
-        /* SMTD_MT(KC_ENT, KC_LSFT) */
-        /* SMTD_MT(KC_S, KC_LEFT_CTRL) */
-        /* SMTD_MT(KC_D, KC_LEFT_GUI) */
-        /* SMTD_MT(KC_F, KC_LEFT_ALT) */
-    /* } */
-    /* return SMTD_RESOLUTION_UNHANDLED; */
-/* } */
-
-/* bool process_record_user(uint16_t keycode, keyrecord_t *record) { */
-    /* if (!process_smtd(keycode, record)) { */
-        /* return false; */
-    /* } */
-
-    /* return true; */
-/* } */
+#include "sm_td.h"
+/* tap_dance_action_t tap_dance_actions[] = { */
+    /* // Tap Once Quote, Tap Twice Escape */
+    /* [TD_SCLN_ESC] = ACTION_TAP_DANCE_DOUBLE(KC_SCLN, KC_ESC), */
+/* }; */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-        KC_NO,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,   KC_P,  KC_NO,
+        KC_NO,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,   KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_NO,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, TD(TD_SCLN_ESC), KC_NO,
+        KC_NO,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN,   KC_NO,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-        KC_NO,SFT_T(KC_Z),CTL_T(KC_X),GUI_T(KC_C),ALT_T(KC_V),KC_B,                 KC_N,ALT_T(KC_M),GUI_T(KC_COMM),CTL_T(KC_DOT),SFT_T(KC_SLSH), KC_NO,
+        KC_NO,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH,   KC_NO,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           KC_NO,   MO(2),  KC_ENT,     KC_SPC,   MO(1), KC_NO
                                       //`--------------------------'  `--------------------------'
@@ -95,3 +76,20 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   )
 };
+
+smtd_resolution on_smtd_action(uint16_t keycode, smtd_action action, uint8_t tap_count) {
+    switch (keycode) {
+        SMTD_MT(KC_A, KC_LSFT)
+        SMTD_MT(KC_S, KC_LCTL)
+        SMTD_MT(KC_D, KC_LGUI)
+        SMTD_MT(KC_F, KC_LALT)
+    }
+    return SMTD_RESOLUTION_UNHANDLED;
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (!process_smtd(keycode, record)) {
+        return false;
+    }
+    return true;
+}

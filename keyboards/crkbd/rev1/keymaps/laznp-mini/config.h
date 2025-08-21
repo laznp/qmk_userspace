@@ -25,7 +25,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT "Corne Keyboard"
 #define MASTER_LEFT
 #define SPLIT_USB_DETECT
-#define TAPPING_TERM 200
+// #define TAPPING_TERM 200
 // #define DYNAMIC_KEYMAP_LAYER_COUNT 4
 #define LAYER_STATE_8BIT
 #define USE_SERIAL_PD2
@@ -33,4 +33,3 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
 #define CAPS_WORD_INVERT_ON_SHIFT
 #define MAX_DEFERRED_EXECUTORS 10
-

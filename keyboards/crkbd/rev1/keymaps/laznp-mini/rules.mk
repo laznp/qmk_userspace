@@ -1,12 +1,12 @@
 VIA_ENABLE          = no
 VIAL_ENABLE         = no
 LTO_ENABLE          = yes
-COMBO_ENABLE        = yes
-TAP_DANCE_ENABLE    = yes
-OS_KEY_ENABLE       = yes
-SEND_STRING_ENABLE  = yes
-VPATH += keyboards/gboards
+COMBO_ENABLE        = no
+TAP_DANCE_ENABLE    = no
+OS_KEY_ENABLE       = no
+SEND_STRING_ENABLE  = no
 DEFERRED_EXEC_ENABLE = yes
+# VPATH += keyboards/gboards
 
 VIAL_INSECURE       = no
 MOUSEKEY_ENABLE     = no
