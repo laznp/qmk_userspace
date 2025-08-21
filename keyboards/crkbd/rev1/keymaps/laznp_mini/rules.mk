@@ -6,7 +6,6 @@ TAP_DANCE_ENABLE    = no
 OS_KEY_ENABLE       = no
 SEND_STRING_ENABLE  = no
 DEFERRED_EXEC_ENABLE = yes
-VPATH += $(USER_PATH)/modules/stasmarkin/sm_td
 # VPATH += keyboards/gboards
 
 VIAL_INSECURE       = no
