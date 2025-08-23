@@ -1,6 +1,5 @@
 // Left Hand - Top Row
 COMB(WE_ESC,       KC_ESC,   KC_W, KC_E)
-COMB(QW_TAB,       KC_TAB,   KC_W, KC_Q)
 
 // Left Hand - Home Row
 COMB(SD_GUI,       OSM(MOD_LGUI),   KC_S, KC_D)
@@ -10,12 +9,15 @@ COMB(SDF_SFTGUI,   OSM(MOD_LGUI | MOD_LSFT),   KC_S, KC_D, KC_F)
 COMB(SDV_SFTCTL,   OSM(MOD_LCTL | MOD_LSFT),   KC_S, KC_D, KC_V)
 
 // Left Hand - Bottom Row
-SUBS(VIM_SAVE,   ":w\n",   KC_X, KC_C)
-SUBS(VIM_SAVE_QUIT,   ":wq\n",   KC_X, KC_C, KC_V)
+COMB(XC_TAB,       KC_TAB,   KC_X, KC_C)
+// SUBS(VIM_SAVE,   ":w\n",   KC_X, KC_C)
+// SUBS(VIM_SAVE_QUIT,   ":wq\n",   KC_X, KC_C, KC_V)
 
-// Right Hand
+// Right Hand - Top Row
 COMB(IO_BSPC,      KC_BSPC,   KC_I, KC_O)
 COMB(IOJ_DEL,      KC_DEL,    KC_I, KC_O, KC_J)
+
+// Right Hand - Home Row
 COMB(KL_GUI,       OSM(MOD_RGUI),   KC_K, KC_L)
 COMB(JK_SFT,       OSM(MOD_RSFT),   KC_J, KC_K)
 COMB(JL_CTL,       OSM(MOD_RCTL),   KC_J, KC_L)
